@@ -1,0 +1,15 @@
+This is the Rock Band Thing!
+
+Server Setup:
+- You'll need a mysql database. Set it up with the sql scripts in the db folder.
+- The web files go on a web server somewhere that has php5.
+- Edit web/api/rb3.inc with your database setup.
+- Edit client/process.php with your server URL.
+- Everything should work now..
+
+Client Process:
+- Run download.php to download the current score files from Harmonix.
+- It stores the downloads in the data folder
+- gunzip everything in data, overwriting old stuff if there.
+- Run process.php to process the data and upload the scores to the server.
+- Update the timestamps in server/web/queryScores.php (see comment there, and notes file)
